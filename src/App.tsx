@@ -26,6 +26,7 @@ import { DecisionAgentPage } from './pages/DecisionAgentPage';
 import { PackageBuilderPage } from './pages/PackageBuilderPage';
 import { BookingOrchestratorPage } from './pages/BookingOrchestratorPage';
 import { SpecializedAgentsPage } from './pages/SpecializedAgentsPage';
+import { CheckoutPage } from './pages/CheckoutPage';
 import { AIChatDrawer } from './components/chat/AIChatDrawer';
 import { AIProcessingModal } from './components/hero/AIProcessingModal';
 import { CheckoutModal } from './components/modals/CheckoutModal';
@@ -314,6 +315,14 @@ function AppContent() {
           <Route
             path="/provider-agents"
             element={<SpecializedAgentsPage />}
+          />
+          <Route
+            path="/checkout/:tripId"
+            element={<CheckoutPage />}
+          />
+          <Route
+            path="/checkout"
+            element={<CheckoutPage />}
           />
         </Routes>
       </div>

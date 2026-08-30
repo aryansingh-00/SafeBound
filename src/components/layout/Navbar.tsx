@@ -20,7 +20,8 @@ import {
   BrainCircuit,
   Layers,
   CheckSquare,
-  Network
+  Network,
+  CreditCard
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -231,6 +232,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onOpenChat }) => {
                   >
                     <Network className="w-4 h-4 text-violet-600" />
                     <span>🔌 Specialized Provider Agents</span>
+                  </Link>
+                  <Link
+                    to="/checkout/SB-TRIP-MUSSOORIE-4D"
+                    onClick={() => setProfileDropdownOpen(false)}
+                    className="flex items-center gap-2 px-3 py-2 text-xs font-bold text-blue-700 bg-blue-50/80 rounded-xl border border-blue-200/70 transition"
+                  >
+                    <CreditCard className="w-4 h-4 text-blue-600" />
+                    <span>💳 Razorpay Checkout & Escrow</span>
                   </Link>
                   <button
                     onClick={() => {
