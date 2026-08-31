@@ -22,7 +22,8 @@ import {
   CheckSquare,
   Network,
   CreditCard,
-  Activity
+  Activity,
+  BookOpen
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -249,6 +250,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onOpenChat }) => {
                   >
                     <Activity className="w-4 h-4 text-emerald-600" />
                     <span>📡 Live Monitoring & Recovery</span>
+                  </Link>
+                  <Link
+                    to="/trips/SB-TRIP-MUSSOORIE-4D/itinerary"
+                    onClick={() => setProfileDropdownOpen(false)}
+                    className="flex items-center gap-2 px-3 py-2 text-xs font-bold text-orange-700 bg-orange-50/80 rounded-xl border border-orange-200/70 transition"
+                  >
+                    <BookOpen className="w-4 h-4 text-orange-600" />
+                    <span>📋 Smart Itinerary & Documents</span>
                   </Link>
                   <button
                     onClick={() => {
