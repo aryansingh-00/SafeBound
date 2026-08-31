@@ -23,7 +23,8 @@ import {
   Network,
   CreditCard,
   Activity,
-  BookOpen
+  BookOpen,
+  ShieldAlert
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -258,6 +259,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onOpenChat }) => {
                   >
                     <BookOpen className="w-4 h-4 text-orange-600" />
                     <span>📋 Smart Itinerary & Documents</span>
+                  </Link>
+                  <Link
+                    to="/security"
+                    onClick={() => setProfileDropdownOpen(false)}
+                    className="flex items-center gap-2 px-3 py-2 text-xs font-bold text-rose-700 bg-rose-50/80 rounded-xl border border-rose-200/70 transition"
+                  >
+                    <ShieldAlert className="w-4 h-4 text-rose-600" />
+                    <span>🔐 Security & Authorization</span>
                   </Link>
                   <button
                     onClick={() => {

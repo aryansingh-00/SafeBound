@@ -29,6 +29,7 @@ import { SpecializedAgentsPage } from './pages/SpecializedAgentsPage';
 import { CheckoutPage } from './pages/CheckoutPage';
 import { LiveMonitoringPage } from './pages/LiveMonitoringPage';
 import { ItineraryPage } from './pages/ItineraryPage';
+import { SecurityPage } from './pages/SecurityPage';
 import { AIChatDrawer } from './components/chat/AIChatDrawer';
 import { AIProcessingModal } from './components/hero/AIProcessingModal';
 import { CheckoutModal } from './components/modals/CheckoutModal';
@@ -341,6 +342,10 @@ function AppContent() {
           <Route
             path="/itinerary"
             element={<ItineraryPage />}
+          />
+          <Route
+            path="/security"
+            element={<SecurityPage />}
           />
         </Routes>
       </div>
