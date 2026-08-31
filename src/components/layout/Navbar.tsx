@@ -25,7 +25,8 @@ import {
   Activity,
   BookOpen,
   ShieldAlert,
-  FlaskConical
+  FlaskConical,
+  Rocket
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -276,6 +277,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onOpenChat }) => {
                   >
                     <FlaskConical className="w-4 h-4 text-teal-600" />
                     <span>🧪 Test Lab & Evaluations</span>
+                  </Link>
+                  <Link
+                    to="/demo"
+                    onClick={() => setProfileDropdownOpen(false)}
+                    className="flex items-center gap-2 px-3 py-2 text-xs font-bold text-brand-700 bg-brand-50/80 rounded-xl border border-brand-200/70 transition"
+                  >
+                    <Rocket className="w-4 h-4 text-brand-600" />
+                    <span>🚀 Buildathon Demo Hub</span>
                   </Link>
                   <button
                     onClick={() => {
