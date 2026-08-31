@@ -27,6 +27,7 @@ import { PackageBuilderPage } from './pages/PackageBuilderPage';
 import { BookingOrchestratorPage } from './pages/BookingOrchestratorPage';
 import { SpecializedAgentsPage } from './pages/SpecializedAgentsPage';
 import { CheckoutPage } from './pages/CheckoutPage';
+import { LiveMonitoringPage } from './pages/LiveMonitoringPage';
 import { AIChatDrawer } from './components/chat/AIChatDrawer';
 import { AIProcessingModal } from './components/hero/AIProcessingModal';
 import { CheckoutModal } from './components/modals/CheckoutModal';
@@ -323,6 +324,14 @@ function AppContent() {
           <Route
             path="/checkout"
             element={<CheckoutPage />}
+          />
+          <Route
+            path="/live-monitoring"
+            element={<LiveMonitoringPage />}
+          />
+          <Route
+            path="/trips/:tripId/monitoring"
+            element={<LiveMonitoringPage />}
           />
         </Routes>
       </div>

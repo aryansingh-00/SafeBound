@@ -21,7 +21,8 @@ import {
   Layers,
   CheckSquare,
   Network,
-  CreditCard
+  CreditCard,
+  Activity
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -240,6 +241,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onOpenChat }) => {
                   >
                     <CreditCard className="w-4 h-4 text-blue-600" />
                     <span>💳 Razorpay Checkout & Escrow</span>
+                  </Link>
+                  <Link
+                    to="/live-monitoring"
+                    onClick={() => setProfileDropdownOpen(false)}
+                    className="flex items-center gap-2 px-3 py-2 text-xs font-bold text-emerald-700 bg-emerald-50/80 rounded-xl border border-emerald-200/70 transition"
+                  >
+                    <Activity className="w-4 h-4 text-emerald-600" />
+                    <span>📡 Live Monitoring & Recovery</span>
                   </Link>
                   <button
                     onClick={() => {
