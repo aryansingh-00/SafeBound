@@ -24,7 +24,8 @@ import {
   CreditCard,
   Activity,
   BookOpen,
-  ShieldAlert
+  ShieldAlert,
+  FlaskConical
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -267,6 +268,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onOpenChat }) => {
                   >
                     <ShieldAlert className="w-4 h-4 text-rose-600" />
                     <span>🔐 Security & Authorization</span>
+                  </Link>
+                  <Link
+                    to="/testing"
+                    onClick={() => setProfileDropdownOpen(false)}
+                    className="flex items-center gap-2 px-3 py-2 text-xs font-bold text-teal-700 bg-teal-50/80 rounded-xl border border-teal-200/70 transition"
+                  >
+                    <FlaskConical className="w-4 h-4 text-teal-600" />
+                    <span>🧪 Test Lab & Evaluations</span>
                   </Link>
                   <button
                     onClick={() => {

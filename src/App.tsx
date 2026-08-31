@@ -30,6 +30,7 @@ import { CheckoutPage } from './pages/CheckoutPage';
 import { LiveMonitoringPage } from './pages/LiveMonitoringPage';
 import { ItineraryPage } from './pages/ItineraryPage';
 import { SecurityPage } from './pages/SecurityPage';
+import { TestingPage } from './pages/TestingPage';
 import { AIChatDrawer } from './components/chat/AIChatDrawer';
 import { AIProcessingModal } from './components/hero/AIProcessingModal';
 import { CheckoutModal } from './components/modals/CheckoutModal';
@@ -346,6 +347,10 @@ function AppContent() {
           <Route
             path="/security"
             element={<SecurityPage />}
+          />
+          <Route
+            path="/testing"
+            element={<TestingPage />}
           />
         </Routes>
       </div>
